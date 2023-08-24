@@ -1,0 +1,113 @@
+body {
+  font-family: "Karla", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  background-color: beige;
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 300px;
+}
+.container {
+  display: grid;
+  grid-template-columns: 100%;
+  max-width: 600px;
+  grid-template-columns: 1fr 1fr;
+}
+.firstContainer {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 100%;
+  height: 200px;
+  width: 700px;
+  font-size: 16px;
+  padding-left: 20px;
+  grid-area: 1/ 1/ 2/ 3;
+}
+.firstContainer h1 {
+  color: hsl(179, 62%, 43%);
+  margin-top: 35px;
+}
+.firstContainer h4 {
+  color: hsl(71, 73%, 54%);
+  margin: 0px;
+}
+.firstContainer p {
+  color: hsl(218, 22%, 67%);
+  margin: 0px;
+}
+.secondContainer {
+  background-color: hsl(179, 62%, 43%);
+  grid-row: 2;
+  padding-top: 10px;
+  padding-left: 50px;
+  padding-bottom: 30px;
+}
+.secondContainer h4,
+h1,
+p,
+span {
+  color: white;
+}
+.secondContainer span {
+  font-size: 32px;
+  padding-right: 10px;
+}
+.secondContainer h5 {
+  color: hsl(218, 22%, 67%);
+}
+.secondContainer button {
+  text-align: center;
+  width: 100%;
+  padding: 15px;
+  background-color: hsl(71, 73%, 54%);
+  color: white;
+  height: 50px;
+  width: 250px;
+  border: none;
+  border-radius: 5%;
+  font-size: 15px;
+}
+.thirdContainer {
+  background-color: #4abebd;
+  grid-row: 2;
+  padding-left: 30px;
+  font-size: 15px;
+}
+.thirdContainer h4 {
+  color: white;
+}
+.thirdContainer p {
+  width: 200px;
+  line-height: 24px;
+}
+@media (max-width: 767px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .scrolling-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .firstContainer {
+    display: grid;
+    height: 344px;
+    width: 284px;
+    font-size: 16px;
+    padding-left: 20px;
+  }
+  .secondContainer {
+    order: 1;
+    margin-bottom: 20px;
+    grid-row: 2;
+    width: 100%;
+  }
+  .thirdContainer {
+    width: 100%;
+    grid-row: 3;
+  }
+}
